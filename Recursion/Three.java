@@ -1,4 +1,3 @@
-package Recursion;
 public class Three {
     public static int factorial(int n) {
         if (n == 0 || n == 1) {
