@@ -11,3 +11,5 @@ public class Four {
         System.out.println("Sum of first " + n + " natural numbers is: " + result);
     }
 }
+// Output: Sum of first 5 natural numbers is: 15
+// This code defines a recursive method to calculate the sum of the first n natural numbers.
