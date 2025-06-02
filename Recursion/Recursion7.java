@@ -30,7 +30,7 @@ public class Recursion7 {
     }
 
     public static void main(String[] args) {
-        Seven sol = new Seven(); // ← changed from Solution to Seven
+        Recursion7 sol = new Recursion7(); // ← changed from Solution to Seven
 
         int[] nums1 = {5, 7, 7, 8, 8, 10};
         int[] result1 = sol.searchRange(nums1, 8);

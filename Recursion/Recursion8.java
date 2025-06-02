@@ -29,7 +29,7 @@ class Solution {
     }
 }
 
-public class Eight {
+public class Recursion8 {
     public static void main(String[] args) {
         Solution solution = new Solution();
         double x = 2.0;
