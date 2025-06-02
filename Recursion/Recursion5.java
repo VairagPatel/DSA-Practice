@@ -1,4 +1,4 @@
-public class Five {
+public class Recursion5 {
     public static int fib(int n ){
         if(n==0||n==1){
             return n;

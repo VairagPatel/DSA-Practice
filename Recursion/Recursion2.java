@@ -1,11 +1,11 @@
-public class One {
+public class Recursion2 {
     public static void printNumbers(int n) {
         if (n == 1) {
-            System.out.print(n + " ");
+            System.out.print(n);
             return;
         }
-        printNumbers(n - 1);
         System.out.print(n + " ");
+        printNumbers(n - 1);
     }
 
     public static void main(String[] args) {
@@ -13,5 +13,5 @@ public class One {
         printNumbers(n);
     }
 }
-// Output: 1 2 3 4 5 6 7 8 9 10
-// This code defines a recursive method to print numbers from 1 to n.   
+// Output: 10 9 8 7 6 5 4 3 2 1
+// This code defines a recursive method to print numbers from n down to 1.

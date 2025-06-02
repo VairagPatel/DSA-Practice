@@ -1,4 +1,4 @@
-public class Six {
+public class Recursion6 {
     public static boolean Issorted(int[] arr,int i){
 
         // for(int i = 0;i<arr.length;1++){
