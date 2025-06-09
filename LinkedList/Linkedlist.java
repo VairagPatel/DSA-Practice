@@ -1,5 +1,4 @@
 
-import java.awt.image.CropImageFilter;
 
 
 public class Linkedlist{
@@ -233,6 +232,20 @@ public class Linkedlist{
         return true;
     }
 
+    public static boolean isCycle() {
+        Node slow = head;
+        Node fast=head;
+        
+        while(fast!=null&&fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+            if(slow==fast){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
         Linkedlist ll = new Linkedlist();
         ll.print();
@@ -258,7 +271,7 @@ public class Linkedlist{
         // ll.deleteNthfromEnd(3);
         // ll.print();
         System.out.println(ll.checkPalindrome());
-
+        ll.isCycle();
 
     }
 }
