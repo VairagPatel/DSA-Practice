@@ -246,19 +246,50 @@ public class Linkedlist{
         return false;
     }
 
+    public static void removeCycle(){
+        //detect cycle
+        Node slow = head;
+        Node fast = head;
+        boolean cycle = false;
+
+        while(fast!=null && fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+            if(slow==fast){
+                cycle=true;
+                break;
+            }
+        }
+        if(cycle==false){
+            return;
+        }
+
+        //find meeting point
+        slow=head;
+        Node prev=null;
+        while(slow!=fast){
+            prev=fast;
+            slow=slow.next;
+            fast=fast.next;
+        }
+
+        //remove cycle -> last.next = null
+        prev.next = null;
+    }
+
     public static void main(String[] args) {
         Linkedlist ll = new Linkedlist();
         ll.print();
-        ll.addFirst(1);
-        ll.print();
         ll.addFirst(2);
+        ll.print();
+        ll.addFirst(1);
         ll.print();
         ll.addLast(3); 
         ll.print();
         ll.addLast(4);
         ll.print();  
-        ll.add(2,9);
-        ll.print();
+        // ll.add(2,9);
+        // ll.print();
         // // ll.removeFirst();
         // // ll.print(); 
         // // ll.removeLast();
@@ -271,7 +302,9 @@ public class Linkedlist{
         // ll.deleteNthfromEnd(3);
         // ll.print();
         System.out.println(ll.checkPalindrome());
-        ll.isCycle();
+        System.out.println(ll.isCycle());
+        removeCycle();;
+        System.out.println(ll.isCycle());
 
     }
 }
