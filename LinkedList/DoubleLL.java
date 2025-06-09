@@ -1,5 +1,3 @@
-
-
 public class DoubleLL {
     public class Node{
         int data;
