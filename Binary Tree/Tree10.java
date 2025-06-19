@@ -84,6 +84,8 @@ public class Tree10 {
 
         System.out.println("Diameter of tree is = "+diameter(root));
         System.out.println("Diameter of tree optimized way is = "+diameter2(root).diam);
+        System.out.println("Diameter of tree optimized way is = "+diameter2(root).ht);
+
         }
     }
 }
