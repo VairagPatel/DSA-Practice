@@ -106,25 +106,25 @@ public class delete_Node {
         return root;
     }
 
-    // public static void printInRange(Node root, int k1, int k2) {
+    public static void printInRange(Node root, int k1, int k2) {
 
-    //     // base case
-    //     if (root == null) {
-    //         return;
-    //     }
+        // base case
+        if (root == null) {
+            return;
+        }
 
-    //     if (root.data >= k1 && root.data <= k2) {
+        if (root.data >= k1 && root.data <= k2) {
 
-    //         printInRange(root.left, k1, k2);
-    //         System.out.print(root.data + " ");
-    //         printInRange(root.right, k1, k2);
-    //     } else if (root.data > k2) { // data only in right side
-    //         printInRange(root.right, k1, k2);
+            printInRange(root.left, k1, k2);
+            System.out.print(root.data + " ");
+            printInRange(root.right, k1, k2);
+        } else if (root.data > k2) { // data only in right side
+            printInRange(root.right, k1, k2);
 
-    //     } else { // data only in left side
-    //         printInRange(root.left, k1, k2);
-    //     }
-    // }
+        } else { // data only in left side
+            printInRange(root.left, k1, k2);
+        }
+    }
 
     // public static void print(ArrayList<Integer> path) {
     //     for (int i = 0; i < path.size(); i++) {
@@ -181,11 +181,12 @@ public class delete_Node {
 
         // inorder(root);
 
-        delete(root, 6);
-        System.out.println();
-        inorder(root);
+        // delete(root, 6);
+        // inorder(root);
 
-        //printInRange(root, 5, 11);
+        System.out.println();
+        printInRange(root, 5, 11);
+
 
 
 
