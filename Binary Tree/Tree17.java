@@ -4,7 +4,6 @@ public class Tree17 {
         int data;
         Node left;
         Node right;
-        
         public Node(int data){
             this.data = data;
             this.left = null;
@@ -16,21 +15,16 @@ public class Tree17 {
         if(root == null){
             return 0;
         }
-
         int leftChild = transform(root.left);
         int rightChild = transform(root.right);
-
         //saving data to a another variable
         int data = root.data;
-
         int newLeft = root.left == null ? 0 : root.left.data;
         int newRight = root.right == null ? 0 : root.right.data;
-
         //changing the data
         root.data = newLeft+leftChild+newRight+rightChild;
-
         return data;
-    
+
     }
 
     //function for printing a tree
