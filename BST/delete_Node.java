@@ -1,4 +1,4 @@
-
+import java.util.*;
 public class delete_Node {
 
     static class Node {
@@ -126,30 +126,30 @@ public class delete_Node {
         }
     }
 
-    // public static void print(ArrayList<Integer> path) {
-    //     for (int i = 0; i < path.size(); i++) {
-    //         System.out.print(path.get(i) + "->");
-    //     }
-    //     System.out.println("null");
-    // }
+    public static void print(ArrayList<Integer> path) {
+        for (int i = 0; i < path.size(); i++) {
+            System.out.print(path.get(i) + "->");
+        }
+        System.out.println("null");
+    }
 
-    // public static void printRootToLeaf(Node root, ArrayList<Integer> path) {
+    public static void printRootToLeaf(Node root, ArrayList<Integer> path) {
 
-    //     if (root == null) {
-    //         return;
-    //     }
+        if (root == null) {
+            return;
+        }
 
-    //     path.add(root.data);
+        path.add(root.data);
 
-    //     if (root.left == null && root.right == null) {
-    //         print(path);
-    //     }
+        if (root.left == null && root.right == null) {
+            print(path);
+        }
 
-    //     printRootToLeaf(root.left,path);
-    //     printRootToLeaf(root.right,path);
-    //     path.remove(path.size()-1);
+        printRootToLeaf(root.left,path);
+        printRootToLeaf(root.right,path);
+        path.remove(path.size()-1);
 
-    // }
+    }
 
     // public static boolean isValidBST(Node root,Node min, Node max){
 
